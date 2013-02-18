@@ -1,0 +1,6 @@
+config airplay
+	option bname 'Living Room'
+	option initbuf 90
+	option daemonize true
+#	option port 5002
+#	option password '123456'
