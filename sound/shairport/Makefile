@@ -32,7 +32,7 @@ endef
 
 define Package/shairport
   $(Package/shairport/Default)
-  DEPENDS:= +libopenssl +libao +avahi-daemon-dbus +avahi-utils
+  DEPENDS:= +libopenssl +alsa-lib +avahi-daemon-dbus +avahi-utils
 endef
 
 define Package/shairport/description
@@ -41,37 +41,11 @@ define Package/shairport/description
 endef
 
 
-define Package/shairport-perl
-  $(Package/shairport/Default)
-  TITLE+= (Perl)
-  DEPENDS:= shairport +perl \
-	+perl-crypt-openssl-rsa +perl-getopt-long \
-	+perl-http-message +perl-uri \
-	+perlbase-autoloader +perlbase-config +perlbase-cwd \
-	+perlbase-digest +perlbase-dynaloader +perlbase-errno \
-	+perlbase-essential +perlbase-fcntl +perlbase-feature \
-	+perlbase-file +perlbase-findbin +perlbase-io \
-	+perlbase-ipc +perlbase-mime +perlbase-posix \
-	+perlbase-selectsaver +perlbase-socket +perlbase-symbol \
-	+perlbase-tie +perlbase-xsloader
-endef
-
-define Package/shairport-perl/description
-  This package contains Perl ShairPort and Perl dependencies.
-endef
-
-
 define Package/shairport/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/{hairtunes,shairport} $(1)/usr/bin/
-endef
-
-
-define Package/shairport-perl/install
-	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/shairport.pl $(1)/usr/bin/
+	$(INSTALL_BIN) ./files/airplay $(1)/etc/init.d/
 endef
 
 
 $(eval $(call BuildPackage,shairport))
-$(eval $(call BuildPackage,shairport-perl))
