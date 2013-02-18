@@ -32,7 +32,7 @@ endef
 
 define Package/shairport
   $(Package/shairport/Default)
-  DEPENDS:= +libopenssl +alsa-lib +avahi-daemon-dbus +avahi-utils
+  DEPENDS:= +libopenssl +alsa-lib +libavahi-client +avahi-utils
 endef
 
 define Package/shairport/description
