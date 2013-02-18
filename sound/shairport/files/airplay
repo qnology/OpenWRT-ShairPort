@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+	shairport -a 'Living Room' -b 90 -d
+}
+
+stop() {
+	killall -9 shairport
+	killall -9 avahi-publish-service
+}
