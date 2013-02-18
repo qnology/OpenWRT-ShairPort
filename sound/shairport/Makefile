@@ -44,6 +44,8 @@ endef
 define Package/shairport/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/{hairtunes,shairport} $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_BIN) ./files/init.d/airplay $(1)/etc/init.d/
 	$(INSTALL_DATA) ./files/config/airplay $(1)/etc/config/
 endef
