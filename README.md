@@ -11,3 +11,6 @@ libao dependency is eliminated by a ShairPort fork from Skaman (skaman/shairport
 This package also removes the net and the lang branch which are not useful in OpenWRT.
 - Strongswan4 - Replaced by StrongSwan5
 - Perl - Not required as ShairPort C works well.
+- 
+If you've issue with compilation, please raise an issue here.
+If it is an issue with playback, please contact the maintainer of ShairPort.
