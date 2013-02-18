@@ -6,7 +6,7 @@ This is a Git Branch for building ShairPort from GIT feed, based on jlars. To us
 4. scripts/feeds install -a
 
 It will install a ShairPort feed that will only need to depend on alsa-lib.
-libao dependency is eliminated by a ShairPort fork from Skaman (skaman/shairport).
+libao dependency is eliminated by a ShairPort fork from Skaman (https://github.com/skaman/shairport).
 
 This package also removes the net and the lang branch which are not useful in OpenWRT.
 - Strongswan4 - Replaced by StrongSwan5
