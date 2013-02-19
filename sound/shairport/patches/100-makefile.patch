@@ -1,10 +1,10 @@
 --- a/Makefile	2013-01-21 14:48:30.000000000 +0800
-+++ b/Makefile	2013-02-18 13:50:04.067567356 +0800
++++ b/Makefile	2013-02-19 09:22:09.133132948 +0800
 @@ -1,10 +1,10 @@
 -CFLAGS:=-O2 -Wall $(shell pkg-config --cflags openssl ao)
 -LDFLAGS:=-lm -lpthread $(shell pkg-config --libs openssl ao)
 -OBJS=socketlib.o shairport.o alac.o hairtunes.o audio_ao.o
-+CFLAGS+=-O2 -Wall $(shell pkg-config --cflags openssl)
++CFLAGS+=-Wall $(shell pkg-config --cflags openssl)
 +LDFLAGS+=-lm -lpthread -lasound $(shell pkg-config --libs openssl)
 +OBJS=socketlib.o shairport.o alac.o hairtunes.o audio_alsa.o
  all: hairtunes shairport
