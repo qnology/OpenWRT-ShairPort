@@ -23,7 +23,7 @@ handle_airplay() {
 	config_get_bool daemonize "$1" daemonize 1
         config_get pcm "$1" pcm "default"
         config_get ctl "$1" ctl "default"
-        config_get volume "$1" ctl "Speaker"
+        config_get volume "$1" volume "Speaker"
 	
 	if [ $daemonize -eq 0 ]
 	then
