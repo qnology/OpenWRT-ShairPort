@@ -17,7 +17,7 @@ handle_airplay() {
 	extra="-d"
 	
 	config_get bname "$1" bname "AirPort"
-	config_get initbuf "$1" initbuf "90"
+	config_get initbuf "$1" initbuf "220"
 	config_get port "$1" port "5002"
 	config_get password "$1" password
 	config_get_bool daemonize "$1" daemonize 1
@@ -25,21 +25,8 @@ handle_airplay() {
         config_get ctl "$1" ctl "default"
         config_get volume "$1" volume "Speaker"
 	
-	if [ $daemonize -eq 0 ]
-	then
-		if [ "x$password" == "x" ]
-		then
-			shairport -a "$bname" -b $initbuf -o $port --alsa_pcm=$pcm --alsa_ctl=$ctl --alsa_volume=$volume
-		else
-			shairport -a "$bname" -b $initbuf -o $port -p $password --alsa_pcm=$pcm --alsa_ctl=$ctl --alsa_volume=$volume
-		fi	
-	fi
-	if [ "x$password" == "x" ]
-	then
-		shairport -a "$bname" -b $initbuf -o $port $extra --alsa_pcm=$pcm --alsa_ctl=$ctl --alsa_volume=$volume
-	else
-		shairport -a "$bname" -b $initbuf -o $port -p $password $extra --alsa_pcm=$pcm --alsa_ctl=$ctl --alsa_volume=$volume
-	fi
+	shairport -a "$bname" -b $initbuf -p $port 
+		
 }
 
 start() {
