@@ -25,7 +25,7 @@ handle_airplay() {
         config_get ctl "$1" ctl "default"
         config_get volume "$1" volume "Speaker"
 	
-	shairport -n "$bname" -b $initbuf -p $port 
+	shairport -n "$bname" -s $initbuf -p $port 
 		
 }
 
