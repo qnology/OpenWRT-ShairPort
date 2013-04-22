@@ -3,7 +3,4 @@ config airplay
 	option initbuf 220
 	option daemonize true
 #	option port 5002
-#	option password '123456'
-	option pcm 'default'
-	option ctl 'default'
-	option volume 'Speaker'
+
