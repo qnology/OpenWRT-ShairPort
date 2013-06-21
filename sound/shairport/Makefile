@@ -8,8 +8,8 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=shairport
-PKG_VERSION:=0.05
+PKG_NAME:=shairportq
+PKG_VERSION:=0.06
 PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
@@ -27,7 +27,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/shairport/Default
   SECTION:=sound
   CATEGORY:=Sound
-  TITLE:=ShairPort
+  TITLE:=ShairPortQ
   URL:=http://mafipulation.org/
 endef
 
