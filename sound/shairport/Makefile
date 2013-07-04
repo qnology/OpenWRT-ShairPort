@@ -13,7 +13,8 @@ PKG_VERSION:=0.06
 PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=git://github.com/sm3rt/shairport.git
+#PKG_SOURCE_URL:=git://github.com/sm3rt/shairport.git
+PKG_SOURCE_URL=git://github.com/abrasive/shairport/tree/1.0-dev.git
 PKG_SOURCE_VERSION:=HEAD
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
