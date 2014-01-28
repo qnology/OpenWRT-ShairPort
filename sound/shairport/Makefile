@@ -8,8 +8,8 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=shairport
-PKG_VERSION:=0.06
+PKG_NAME:=shairport_qnology
+PKG_VERSION:=1.0
 PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
 PKG_SOURCE_PROTO:=git
