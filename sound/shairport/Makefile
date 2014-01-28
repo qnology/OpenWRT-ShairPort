@@ -28,7 +28,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/shairport/Default
   SECTION:=sound
   CATEGORY:=Sound
-  TITLE:=ShairPort
+  TITLE:=ShairPort_Qnology
   URL:=http://mafipulation.org/
 endef
 
