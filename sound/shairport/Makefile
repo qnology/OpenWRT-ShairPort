@@ -8,7 +8,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=shairport_qnology
+PKG_NAME:=shairport
 PKG_VERSION:=1.0
 PKG_RELEASE:=$(PKG_SOURCE_VERSION)
 
@@ -28,7 +28,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/shairport/Default
   SECTION:=sound
   CATEGORY:=Sound
-  TITLE:=ShairPort_Qnology
+  TITLE:=ShairPort
   URL:=http://mafipulation.org/
 endef
 
