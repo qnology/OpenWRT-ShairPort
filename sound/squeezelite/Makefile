@@ -15,8 +15,8 @@ PKG_SOURCE_VERSION:=75a72d5f86e1675b5c5892ee5fb2278bbe8dc695
 include $(INCLUDE_DIR)/package.mk
 
 define Package/squeezelite
-  SECTION:=multimedia
-  CATEGORY:=Multimedia
+  SECTION:=sound
+  CATEGORY:=Sound
   TITLE:=lightweight headless squeezebox emulator
   URL:=http://www.squeezelite/
   DEPENDS:= +AUDIO_SUPPORT:alsa-lib \
