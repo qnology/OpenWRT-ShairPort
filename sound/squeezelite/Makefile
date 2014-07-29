@@ -14,13 +14,19 @@ PKG_SOURCE_VERSION:=75a72d5f86e1675b5c5892ee5fb2278bbe8dc695
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/squeezelite
+define Package/squeezelite/Default
   SECTION:=sound
   CATEGORY:=Sound
-  TITLE:=lightweight headless squeezebox emulator
-  URL:=http://www.squeezelite/
+  TITLE:=squeezelite
+  URL:=http://squeezelite/
+endef
+
+
+define Package/squeezelite
+  $(Package/squeezelite/Default)
   DEPENDS:= +libvorbis +libflac +libfaad2 +libffmpeg +libmad +libpthread
 endef
+
 
 define Package/squeezelite/description
  lightweight headless squeezebox emulator
