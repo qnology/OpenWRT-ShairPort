@@ -21,7 +21,7 @@ define Package/squeezelite
   URL:=http://www.squeezelite/
   DEPENDS:= +AUDIO_SUPPORT:alsa-lib \
         +libvorbis +libflac \
-        +libfaad2 +libffmpeg +libmad +libmpg123 +libpthread
+        +libfaad2 +libffmpeg +libmad +libpthread
 endef
 
 define Package/squeezelite/description
