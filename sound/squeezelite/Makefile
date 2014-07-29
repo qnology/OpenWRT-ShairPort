@@ -19,9 +19,7 @@ define Package/squeezelite
   CATEGORY:=Sound
   TITLE:=lightweight headless squeezebox emulator
   URL:=http://www.squeezelite/
-  DEPENDS:= +AUDIO_SUPPORT:alsa-lib \
-        +libvorbis +libflac \
-        +libfaad2 +libffmpeg +libmad +libpthread
+  DEPENDS:= +libvorbis +libflac +libfaad2 +libffmpeg +libmad +libpthread
 endef
 
 define Package/squeezelite/description
