@@ -11,6 +11,9 @@ PKG_SOURCE_URL:=https://code.google.com/p/squeezelite/
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_VERSION:=HEAD
 
+CFLAGS  += -Wall -fPIC -O2 $(OPTS)
+LDFLAGS += -lasound -lpthread -lm -lrt
+
 
 include $(INCLUDE_DIR)/package.mk
 
