@@ -9,7 +9,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://code.google.com/p/squeezelite/
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=75a72d5f86e1675b5c5892ee5fb2278bbe8dc695
+PKG_SOURCE_VERSION:=HEAD
 
 
 include $(INCLUDE_DIR)/package.mk
@@ -18,7 +18,7 @@ define Package/squeezelite/Default
   SECTION:=sound
   CATEGORY:=Sound
   TITLE:=squeezelite
-  URL:=http://squeezelite/
+  URL:=https://code.google.com/p/squeezelite/
 endef
 
 
