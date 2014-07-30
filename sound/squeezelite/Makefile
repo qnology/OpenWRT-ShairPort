@@ -27,7 +27,9 @@ endef
 
 define Package/squeezelite
   $(Package/squeezelite/Default)
-  DEPENDS:= +libvorbis +libflac +libfaad2 +libffmpeg +libmad +libpthread
+  DEPENDS:= +AUDIO_SUPPORT:alsa-lib \
+        +libvorbis +libflac \
+        +libfaad2 +libffmpeg +libmad +libmpg123 +libpthread
 endef
 
 
